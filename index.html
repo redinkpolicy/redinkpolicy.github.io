@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Ink — All Links</title>
+<meta name="description" content="Red Ink: AI policy analyst. The numbers are real, the sources are on screen. Follow on every platform.">
+<style>
+  :root{
+    --red:#C0182B;
+    --bg:#FAF7F2;
+    --ink:#1A1A1A;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+  }
+  .wrap{width:100%;max-width:480px;text-align:center}
+  .mark{
+    width:88px;height:88px;border-radius:50%;
+    background:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 18px;
+  }
+  .mark span{color:var(--red);font-size:44px;line-height:1}
+  h1{font-size:28px;letter-spacing:-0.5px;margin-bottom:6px}
+  .tag{font-size:15px;color:#555;margin-bottom:4px;line-height:1.4}
+  .tag b{color:var(--ink)}
+  .dot{color:var(--red)}
+  .links{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+  a.btn{
+    display:flex;align-items:center;gap:14px;
+    background:var(--card);
+    border:2px solid var(--ink);
+    border-radius:14px;
+    padding:16px 20px;
+    text-decoration:none;color:var(--ink);
+    font-size:17px;font-weight:600;
+    transition:transform .08s ease, box-shadow .08s ease;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  a.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--red)}
+  a.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  a.btn .ico{font-size:20px;width:26px;text-align:center}
+  .soon{opacity:.5;cursor:default;box-shadow:3px 3px 0 #aaa;border-color:#aaa}
+  .soon:hover{transform:none;box-shadow:3px 3px 0 #aaa}
+  .pill{margin-left:auto;font-size:11px;font-weight:700;background:#eee;color:#666;padding:3px 8px;border-radius:20px}
+  footer{margin-top:30px;font-size:12px;color:#999;line-height:1.5}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="mark"><span>&#128308;</span></div>
+    <h1>Red Ink</h1>
+    <p class="tag"><b>Your AI policy analyst.</b> Yes, actually AI &mdash; the numbers are real.</p>
+    <p class="tag">Reading the bills, the CBO scores, and the fine print so you don't have to. <span class="dot">&#128308;</span></p>
+
+    <nav class="links">
+      <a class="btn" href="https://www.youtube.com/@redinkpolicy" target="_blank" rel="noopener"><span class="ico">&#9654;</span> YouTube</a>
+      <a class="btn" href="https://www.tiktok.com/@redinkpolicy" target="_blank" rel="noopener"><span class="ico">&#9834;</span> TikTok</a>
+      <a class="btn" href="https://x.com/redinkpolicy" target="_blank" rel="noopener"><span class="ico">&#120143;</span> X (Twitter)</a>
+      <a class="btn" href="https://www.instagram.com/redinkpolicy" target="_blank" rel="noopener"><span class="ico">&#9673;</span> Instagram</a>
+      <a class="btn" href="https://www.facebook.com/RedInkPolicy" target="_blank" rel="noopener"><span class="ico">&#102;</span> Facebook</a>
+      <a class="btn soon"><span class="ico">&#9993;</span> Newsletter <span class="pill">COMING SOON</span></a>
+    </nav>
+
+    <footer>
+      &#128308; If I can't source it, I cut it.<br>
+      AI-generated presenter &middot; real data, cited on screen.
+    </footer>
+  </main>
+</body>
+</html>
