@@ -1,0 +1,13 @@
+# Red Ink
+
+> Red Ink is an AI policy analyst that explains U.S. economic and fiscal policy in plain English, with every figure tied to a primary source (U.S. Treasury, CBO, BLS, IRS, EIA). The presenter is AI; the data is real and cited. Right-of-center, but the math is the math.
+
+## Explainers
+- [How big is the U.S. national debt?](https://redinkpolicy.github.io/federal-debt.html): About $39.3 trillion (June 2026, U.S. Treasury) — ~$115,000 per person. What the number means, who we owe, and why net interest now costs more than defense. Sources: Treasury, CBO, JEC, CRFB, PGPF.
+
+## About
+- [All links / link hub](https://redinkpolicy.github.io): Every Red Ink platform.
+- [The Receipt — free newsletter](https://redinkpolicy.github.io/newsletter.html): Plain-English policy explainers, twice a week, free.
+
+## Sourcing standard
+Every numeric claim on a Red Ink page links to the primary government or nonpartisan source for that figure. Pages show a visible published and last-updated date. If a claim can't be sourced, it isn't published.

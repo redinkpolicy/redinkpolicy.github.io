@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Receipt — Red Ink's policy newsletter</title>
+<meta name="description" content="Red Ink's free newsletter. The bills, the CBO scores, and the fine print — explained in plain English, every number sourced. Right-leaning, but the math is the math.">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="The Receipt — Red Ink's policy newsletter">
+<meta property="og:description" content="Policy, explained. Every number sourced on screen. Free, twice a week.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://redinkpolicy.github.io/newsletter.html">
+
+<style>
+  :root{
+    --red:#C0182B;
+    --bg:#FAF7F2;
+    --ink:#1A1A1A;
+    --card:#ffffff;
+    --muted:#555;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%;max-width:620px;margin:0 auto;padding:40px 20px 60px}
+
+  /* header / brand mark */
+  .top{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:34px}
+  .mark{
+    width:52px;height:52px;border-radius:50%;
+    background:var(--ink);
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .mark span{color:var(--red);font-size:26px;line-height:1}
+  .brand{font-size:18px;font-weight:800;letter-spacing:-0.3px}
+  .brand small{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0}
+
+  /* hero */
+  .kicker{
+    display:inline-block;font-size:12px;font-weight:800;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--red);margin-bottom:14px;
+  }
+  h1{font-size:40px;line-height:1.08;letter-spacing:-1px;margin-bottom:16px}
+  h1 .u{
+    background:linear-gradient(transparent 62%, rgba(192,24,43,.25) 0);
+  }
+  .lede{font-size:18px;color:#333;margin-bottom:6px}
+  .lede b{color:var(--ink)}
+
+  /* signup card */
+  .signup{
+    background:var(--card);
+    border:2.5px solid var(--ink);
+    border-radius:16px;
+    box-shadow:6px 6px 0 var(--ink);
+    padding:26px 24px;
+    margin:30px 0 14px;
+  }
+  .signup h2{font-size:21px;letter-spacing:-0.4px;margin-bottom:4px}
+  .signup p.sub{font-size:14px;color:var(--muted);margin-bottom:18px}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input[type=email]{
+    flex:1 1 220px;min-width:0;
+    font-size:16px;padding:14px 16px;
+    border:2px solid var(--ink);border-radius:10px;
+    background:#fff;color:var(--ink);
+  }
+  input[type=email]:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(192,24,43,.15)}
+  button{
+    flex:0 0 auto;
+    font-size:16px;font-weight:800;letter-spacing:.2px;
+    padding:14px 22px;cursor:pointer;
+    background:var(--red);color:#fff;
+    border:2px solid var(--ink);border-radius:10px;
+    box-shadow:3px 3px 0 var(--ink);
+    transition:transform .08s ease, box-shadow .08s ease;
+  }
+  button:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+  button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .fineprint{font-size:12px;color:#888;margin-top:12px}
+  #msg{font-size:14px;font-weight:700;margin-top:12px;display:none}
+
+  /* value props */
+  .props{margin:42px 0 10px;display:grid;gap:16px}
+  .prop{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--card);border:2px solid var(--ink);border-radius:12px;
+    padding:16px 18px;box-shadow:3px 3px 0 var(--ink);
+  }
+  .prop .n{
+    flex:none;width:30px;height:30px;border-radius:8px;
+    background:var(--ink);color:var(--red);font-weight:800;
+    display:flex;align-items:center;justify-content:center;font-size:15px;
+  }
+  .prop h3{font-size:16px;margin-bottom:2px}
+  .prop p{font-size:14px;color:var(--muted)}
+
+  /* proof / what it looks like */
+  .proof{
+    margin:40px 0;padding:24px;border-radius:14px;
+    background:var(--ink);color:#f3f0ea;
+  }
+  .proof .tagline{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);font-weight:800;margin-bottom:10px}
+  .proof blockquote{font-size:17px;line-height:1.5}
+  .proof .num{color:#ff5a6e;font-weight:800}
+  .proof cite{display:block;margin-top:12px;font-size:13px;color:#9b958c;font-style:normal}
+
+  /* trust strip */
+  .trust{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:34px 0}
+  .chip{font-size:12.5px;font-weight:700;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:30px;padding:7px 14px}
+
+  footer{margin-top:46px;text-align:center;font-size:12.5px;color:#999;line-height:1.7}
+  footer a{color:#777}
+
+  @media(max-width:480px){
+    h1{font-size:32px}
+    button{flex:1 1 100%}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+
+    <div class="top">
+      <div class="mark"><span>&#128308;</span></div>
+      <div class="brand">Red Ink<small>Your AI policy analyst</small></div>
+    </div>
+
+    <span class="kicker">The Receipt &middot; Free Newsletter</span>
+    <h1>Policy, <span class="u">explained.</span> Every number on the table.</h1>
+    <p class="lede"><b>The bills, the CBO scores, and the fine print</b> &mdash; in plain English, twice a week. Right-leaning, but the math is the math. If we can't source it, we cut it.</p>
+
+    <!-- ============================================================
+         SIGNUP FORM — LIVE (wired to beehiiv: Red Ink Policy)
+         Publication: redinkpolicy-newsletter-c552a5.beehiiv.com
+         On submit, the typed email is handed to the beehiiv hosted
+         subscribe page, which completes the opt-in. To embed inline
+         instead, swap this block for beehiiv's iframe snippet.
+    ============================================================= -->
+    <section class="signup">
+      <h2>Get the receipts in your inbox.</h2>
+      <p class="sub">Free. Two emails a week. Unsubscribe in one click.</p>
+      <form id="signup-form" action="" method="post">
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="msg"></p>
+      <p class="fineprint">No spam, no selling your data. Just the numbers behind the headlines.</p>
+    </section>
+
+    <section class="props">
+      <div class="prop">
+        <div class="n">1</div>
+        <div><h3>The number behind the headline</h3>
+        <p>The stat the headline buried &mdash; what a bill actually costs your paycheck, your power bill, your future.</p></div>
+      </div>
+      <div class="prop">
+        <div class="n">2</div>
+        <div><h3>Sourced, not shouted</h3>
+        <p>Every claim ties to a primary source &mdash; CBO, Treasury, BLS. No outrage, no vibes. You leave smarter, not just angrier.</p></div>
+      </div>
+      <div class="prop">
+        <div class="n">3</div>
+        <div><h3>The steelman</h3>
+        <p>Once a week we state the other side's best case fairly &mdash; then check it against the data. That's the credibility engine.</p></div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="tagline">A sample receipt</div>
+      <blockquote>The top 10% of earners pay <span class="num">70.5%</span> of all federal income tax. The bottom 50% pay <span class="num">3.3%</span>. Whatever you think "fair share" means &mdash; start from that number.</blockquote>
+      <cite>Source: IRS Statistics of Income, 2023 &middot; cited on screen, like always.</cite>
+    </section>
+
+    <div class="trust">
+      <span class="chip">&#128308; Sources on screen</span>
+      <span class="chip">Plain English</span>
+      <span class="chip">Twice a week</span>
+      <span class="chip">Always free</span>
+    </div>
+
+    <footer>
+      &copy; Red Ink &middot; AI policy analyst. The presenter is AI; the data is real and cited.<br>
+      <a href="https://redinkpolicy.github.io">All links</a> &middot;
+      <a href="https://www.youtube.com/@redinkpolicy">YouTube</a> &middot;
+      <a href="https://x.com/redinkpolicy">X</a> &middot;
+      <a href="https://www.tiktok.com/@redinkpolicy">TikTok</a>
+    </footer>
+
+  </main>
+
+<script>
+  // LIVE: hands the typed email off to the beehiiv hosted subscribe page,
+  // which completes the signup (double opt-in, etc.) on beehiiv's side.
+  // To switch to an inline iframe embed later, replace the <form> block
+  // with beehiiv's embed snippet — see the comment at the bottom of this file.
+  (function(){
+    var BEEHIIV = "https://redinkpolicy-newsletter-c552a5.beehiiv.com/subscribe";
+    var form = document.getElementById('signup-form');
+    var msg  = document.getElementById('msg');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = (form.email.value || "").trim();
+      if(!email) return;
+      msg.style.display = 'block';
+      msg.style.color = '#C0182B';
+      msg.textContent = "Taking you to confirm your subscription…";
+      window.location.href = BEEHIIV + "?email=" + encodeURIComponent(email);
+    });
+  })();
+</script>
+
+<!--
+================================================================================
+STATUS: LIVE — wired to beehiiv publication "Red Ink Policy"
+================================================================================
+On submit, the typed email is handed to:
+  https://redinkpolicy-newsletter-c552a5.beehiiv.com/subscribe
+which completes the opt-in on beehiiv's side. The link-hub (index.html)
+"Newsletter" button points here.
+
+OPTIONAL UPGRADE — inline iframe embed (subscribe without leaving the page):
+  In beehiiv, generate a Subscribe Form embed and replace the entire
+  <section class="signup">...</section> block with beehiiv's iframe snippet.
+  Higher conversion; trades our custom styling for beehiiv's form styling.
+
+WHEN A CUSTOM DOMAIN IS CHOSEN:
+  Update the BEEHIIV constant in the <script> above (and any links) to the
+  new domain once it's connected in beehiiv → Settings → Domains.
+================================================================================
+-->
+</body>
+</html>
