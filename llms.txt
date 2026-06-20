@@ -4,6 +4,8 @@
 
 ## Explainers
 - [How big is the U.S. national debt?](https://redinkpolicy.github.io/federal-debt.html): About $39.3 trillion (June 2026, U.S. Treasury) — ~$115,000 per person. What the number means, who we owe, and why net interest now costs more than defense. Sources: Treasury, CBO, JEC, CRFB, PGPF.
+- [Why is inflation back in 2026?](https://redinkpolicy.github.io/inflation.html): CPI hit 4.2% in May 2026, but energy drove 60%+ of the jump and gas is up 40.5% YoY; core is 2.9%. It's an oil-supply shock, not broad inflation. Source: U.S. Bureau of Labor Statistics (CPI, May 2026).
+- [Who actually pays federal income tax?](https://redinkpolicy.github.io/who-pays-income-tax.html): The top 10% pay 70.5% and the bottom 50% pay 3.3% of federal income tax; ~30% of filers owe none — with the honest caveat that payroll/sales taxes flatten the full burden. Source: IRS Statistics of Income, tax year 2023 (via Tax Foundation, NTU).
 
 ## About
 - [All links / link hub](https://redinkpolicy.github.io): Every Red Ink platform.
