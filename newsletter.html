@@ -147,11 +147,8 @@
     <section class="signup">
       <h2>Get the receipts in your inbox.</h2>
       <p class="sub">Free. Two emails a week. Unsubscribe in one click.</p>
-      <form id="signup-form" action="" method="post">
-        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-        <button type="submit">Subscribe</button>
-      </form>
-      <p id="msg"></p>
+      <!-- beehiiv native embed — one-step subscribe, posts directly to beehiiv (no redirect) -->
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="d7fd68f8-3ef7-4cf1-b8fe-5c43ed062770"></script>
       <p class="fineprint">No spam, no selling your data. Just the numbers behind the headlines.</p>
     </section>
 
@@ -197,43 +194,23 @@
   </main>
 
 <script>
-  // LIVE: hands the typed email off to the beehiiv hosted subscribe page,
-  // which completes the signup (double opt-in, etc.) on beehiiv's side.
-  // To switch to an inline iframe embed later, replace the <form> block
-  // with beehiiv's embed snippet — see the comment at the bottom of this file.
-  (function(){
-    var BEEHIIV = "https://redinkpolicy-newsletter-c552a5.beehiiv.com/subscribe";
-    var form = document.getElementById('signup-form');
-    var msg  = document.getElementById('msg');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var email = (form.email.value || "").trim();
-      if(!email) return;
-      msg.style.display = 'block';
-      msg.style.color = '#C0182B';
-      msg.textContent = "Taking you to confirm your subscription…";
-      window.location.href = BEEHIIV + "?email=" + encodeURIComponent(email);
-    });
-  })();
+  // (Subscribe handled by the beehiiv native embed in the signup section —
+  //  one-step, posts directly to beehiiv, no redirect.)
 </script>
 
 <!--
 ================================================================================
-STATUS: LIVE — wired to beehiiv publication "Red Ink Policy"
+STATUS: LIVE — beehiiv native embed (publication "Red Ink Policy")
 ================================================================================
-On submit, the typed email is handed to:
-  https://redinkpolicy-newsletter-c552a5.beehiiv.com/subscribe
-which completes the opt-in on beehiiv's side. The link-hub (index.html)
-"Newsletter" button points here.
+The signup uses beehiiv's own embedded form (subscribe-forms loader, form id
+d7fd68f8-3ef7-4cf1-b8fe-5c43ed062770). Subscribing happens in ONE step on this
+page and posts straight to beehiiv — no redirect, no re-entering the email.
+Double opt-in is OFF in beehiiv (Settings → Emails), so no confirmation email
+is required. The link-hub (index.html) "Newsletter" button points here.
 
-OPTIONAL UPGRADE — inline iframe embed (subscribe without leaving the page):
-  In beehiiv, generate a Subscribe Form embed and replace the entire
-  <section class="signup">...</section> block with beehiiv's iframe snippet.
-  Higher conversion; trades our custom styling for beehiiv's form styling.
-
-WHEN A CUSTOM DOMAIN IS CHOSEN:
-  Update the BEEHIIV constant in the <script> above (and any links) to the
-  new domain once it's connected in beehiiv → Settings → Domains.
+To restyle the form, edit it in beehiiv → Subscribe forms (the embed updates
+automatically). When a custom domain is connected, no change needed here —
+the embed is domain-independent.
 ================================================================================
 -->
 </body>
