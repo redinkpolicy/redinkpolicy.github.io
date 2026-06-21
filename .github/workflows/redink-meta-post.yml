@@ -1,0 +1,53 @@
+name: Red Ink — Meta (FB + IG) poster
+
+# Runs on GitHub's servers, which CAN reach the Meta Graph API (the Cowork sandbox can't).
+# Token comes from the encrypted repo secret META_TOKEN (Settings → Secrets → Actions).
+
+on:
+  workflow_dispatch:        # manual "Run workflow" button
+    inputs:
+      mode:
+        description: "self-test (just check the token) or post"
+        type: choice
+        options: [self-test, post]
+        default: self-test
+      video_url:
+        description: "Public .mp4 URL (post mode only)"
+        required: false
+      caption:
+        description: "Caption text (post mode only)"
+        required: false
+      platforms:
+        description: "Where to post"
+        type: choice
+        options: [ig,fb, ig, fb]
+        default: ig,fb
+  # Weekly schedule — enabled once we've confirmed a successful test post.
+  # schedule:
+  #   - cron: "40 16 * * 2"   # Tue 16:40 UTC (~12:40 ET) — adjust later
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Run poster
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: |
+          if [ -z "${META_TOKEN}" ]; then
+            echo "::error::META_TOKEN secret is not set. Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          if [ "${{ inputs.mode }}" = "self-test" ]; then
+            python3 redink_meta_post.py --self-test
+          else
+            python3 redink_meta_post.py \
+              --video-url "${{ inputs.video_url }}" \
+              --caption "${{ inputs.caption }}" \
+              --platforms "${{ inputs.platforms }}"
+          fi
