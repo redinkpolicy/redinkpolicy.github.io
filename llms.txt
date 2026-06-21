@@ -9,6 +9,9 @@
 - [Why is the Fed keeping interest rates high in 2026?](https://redinkpolicy.github.io/fed-interest-rates.html): The Fed held at 3.50–3.75% in June 2026 and raised its year-end projection to 3.8% (from 3.4% in March) after inflation jumped — leaning toward hikes, not cuts. What it costs households and the federal debt. Source: Federal Reserve Summary of Economic Projections, June 17, 2026.
 - [Are student loan defaults rising in 2026?](https://redinkpolicy.github.io/student-loan-defaults.html): After the pandemic pause ended, ~1M borrowers defaulted in Q4 2025 and 2.6M more in Q1 2026 (~3.6M); 17%+ have hit 90 days late; ~7M former SAVE borrowers face a second wave. Source: NY Fed (Liberty Street Economics, May 2026).
 
+## News
+- [The Receipt Feed](https://redinkpolicy.github.io/news.html): Red Ink's curated weekly feed of policy/economic news, each story paired with the primary-source number behind it and a one-line take. Right-of-center lens, sourced. Updated weekly.
+
 ## About
 - [All links / link hub](https://redinkpolicy.github.io): Every Red Ink platform.
 - [The Receipt — free newsletter](https://redinkpolicy.github.io/newsletter.html): Plain-English policy explainers, twice a week, free.
