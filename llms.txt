@@ -1,6 +1,6 @@
 # Red Ink
 
-> Red Ink is an AI policy analyst that explains U.S. economic and fiscal policy in plain English, with every figure tied to a primary source (U.S. Treasury, CBO, BLS, IRS, EIA). The presenter is AI; the data is real and cited. Right-of-center, but the math is the math.
+> Red Ink makes the strongest, best-sourced conservative case on the numbers behind U.S. policy. Every figure is tied to a primary source (U.S. Treasury, CBO, BLS, IRS, EIA, NY Fed, Fed), and we steelman the opposing case fairly before answering it. The presenter is AI; the data is real and cited. We argue from the right; we never fudge a number.
 
 ## Explainers
 - [How big is the U.S. national debt?](https://redinkpolicy.github.io/federal-debt.html): About $39.3 trillion (June 2026, U.S. Treasury) — ~$115,000 per person. What the number means, who we owe, and why net interest now costs more than defense. Sources: Treasury, CBO, JEC, CRFB, PGPF.
@@ -10,6 +10,7 @@
 - [Are student loan defaults rising in 2026?](https://redinkpolicy.github.io/student-loan-defaults.html): After the pandemic pause ended, ~1M borrowers defaulted in Q4 2025 and 2.6M more in Q1 2026 (~3.6M); 17%+ have hit 90 days late; ~7M former SAVE borrowers face a second wave. Source: NY Fed (Liberty Street Economics, May 2026).
 - [Is nuclear power safe?](https://redinkpolicy.github.io/nuclear-safety.html): By deaths per TWh, nuclear (~0.03) is the second-safest source and ~800x safer than coal (~24.6), even counting Chernobyl and Fukushima; the real obstacle is build cost/time, not safety. Source: Our World in Data.
 - [Is a college degree still worth it?](https://redinkpolicy.github.io/is-college-worth-it.html): A bachelor's earns ~$2.8M lifetime vs ~$1.6M for high school (~$1.2M / 75% more) — but the average hides huge variance; major and occupation often matter more than the diploma. Source: Georgetown CEW, "The College Payoff."
+- [Why does nuclear power cost so much to build in America?](https://redinkpolicy.github.io/why-nuclear-costs-so-much.html): Vogtle's two reactors ran from a ~$14B estimate to ~$36.8B and ~7 years late; V.C. Summer spent ~$9B for zero reactors. The cost is self-inflicted (regulation, one-off designs, a decayed supply chain), not physics or safety — Korea built 4 reactors at Barakah (~5,600 MW) for ~$24–32B. The June 23, 2026 DOE $17.5B conditional loan targets the supply-chain/time bottleneck for up to 10 AP1000 reactors. Sources: DOE, World Nuclear News, ANS, Utility Dive, Our World in Data.
 
 ## News
 - [The Receipt Feed](https://redinkpolicy.github.io/news.html): Red Ink's curated weekly feed of policy/economic news, each story paired with the primary-source number behind it and a one-line take. Right-of-center lens, sourced. Updated weekly.
